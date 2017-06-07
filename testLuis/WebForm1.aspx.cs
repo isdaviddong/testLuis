@@ -27,12 +27,12 @@ namespace testLuis
             if (ret.Intents.Count() <= 0) return;
 
             var msg = "<br><br>  ---- Intents :";
-            foreach (var item in ret.Intents) //顯示intent
+            foreach (var item in ret.Intents)           //顯示所有抓取到的intent
             {
                 msg += $"<br> intent {item.Name}  score:{item.Score} ";
             }
             msg += "<br><br> ---- Entities :";
-            foreach (var item in ret.Entities)  //Entities
+            foreach (var item in ret.Entities)          //顯示所有抓取到的Entities
             {
                 msg += $"<br> Entities {item.Value[0].Name} score:{ item.Value[0].Score} ";
             }
